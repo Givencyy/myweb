@@ -15,7 +15,7 @@
 ```
 <h1>ooxx</h1>
 <h2>ooxx</h2>
-<picture>
+	<picture>
 		<source media="(min-width: 1201px)" srcset="./images/1920.jpg">
 		<source media="(min-width: 1025px)" srcset="./images/1200.jpg">
 		<source media="(min-width: 769px)" srcset="./images/1024.jpg">
