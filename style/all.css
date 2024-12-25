@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* Helper ----------------------------- */
+
+.container {
+	max-width: 1200px;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* Reset ------------------------------- */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body, ul {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: '微軟正黑體';
+	font-size: 15px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* Module ----------------------------- */
+
+.pic-ls {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pic-item {
+	width: 25%;
+	padding: 15px;
+}
+
+.pic-mask {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.pic-mask::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;
+	transition: all .5s ease;
+}
+
+.pic-mask:hover .pic-intro {
+	bottom: 0;
+}
+
+.pic-mask:hover .pic-img {
+	transform: scale(1.2);
+}
+
+.pic-mask:hover::after {
+	opacity: .5;
+}
+
+.pic-img {
+	width: 100%;
+	height: auto;
+	display: block;
+	transition: all .5s ease;
+}
+
+.pic-intro {
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	transition: all .5s ease;
+}
+
+.pic-spec, .pic-desc {
+	color: #fff;
+}
+
+.pic-brand {
+	color: #ddd;
+	margin: 0 10px;
+	font-style: italic;
+	font-size: 18px;
+}
+
+.pic-spec {
+	margin: 0 10px 15px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.pic-desc {
+	height: 35px;
+	margin: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+	.pic-ls {
+		padding: 10px;
+	}
+	.pic-item {
+		padding: 10px;
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+	.pic-item {
+		width: 33.3333%;
+	}
+	
+}
+
+
+@media screen and (max-width: 480px) {
+	.pic-item {
+		width: 50%;
+		padding: 5px;
+	}
+	
+}
